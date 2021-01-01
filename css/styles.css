@@ -1,0 +1,162 @@
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: black;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.grid-container {
+  display: grid;
+  justify-content: center;
+  grid-template-areas:
+    'header header'
+    'main right';
+}
+
+.grid-head {
+  grid-area: header;
+  background: white;
+  padding: 1em 3em;
+}
+
+.grid-main {
+  grid-area: main;
+  background: hsl(179, 62%, 43%);
+  padding: 1em 3em;
+}
+
+.grid-right {
+  grid-area: right;
+  background: hsl(179, 50%, 58%);
+  padding: 1em 3em;
+}
+
+body {
+  background: hsl(204, 43%, 93%);
+  font-family: 'Karla', sans-serif;
+  height: 100%;
+  font-size: 16px;
+}
+
+.wrapper-container {
+  position: absolute;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 2px 15px #888888;
+  /* we move the origin position and we translate them 50% back from width and height */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.main-container {
+  height: 100%;
+  position: relative;
+  margin: 0;
+}
+
+footer {
+  position: absolute;
+  text-align: center;
+  bottom: 20px;
+  margin: auto;
+  width: 100%;
+}
+
+html {
+  height: 100%;
+}
+
+button {
+  display: block;
+  width: 100%;
+  border-radius: 10px;
+  padding: 10px;
+  background: hsl(71, 73%, 54%);
+  color: white;
+  border: 0;
+  box-shadow: 0px 2px 10px #888888;
+}
+
+button:hover {
+  background: hsl(71, 90%, 60%);
+  color: hsl(179, 62%, 43%);
+  box-shadow: 0px 2px 12px black;
+}
+
+/* COLORS OF TEXT */
+h1 {
+  color: hsl(179, 62%, 43%);
+}
+
+h3 {
+  color: hsl(71, 73%, 54%);
+}
+
+h4 {
+  color: hsl(204, 43%, 93%);
+}
+
+h5 {
+  color: hsl(218, 22%, 67%);
+}
+
+p {
+  color: hsl(204, 43%, 93%);
+}
+
+.plan-price {
+  font-size: 32px;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: lightblue;
+  }
+
+  .grid-container {
+    grid-template-areas:
+      'header'
+      'main'
+      'right';
+  }
+
+  .grid-head {
+    padding: 1em 1em;
+  }
+
+  .grid-main {
+    padding: 1em 1em;
+  }
+
+  .grid-right {
+    padding: 1em 1em;
+  }
+
+  .wrapper-container {
+    /* re-setting the initial position */
+    top: 0%;
+    left: 0%;
+    transform: translate(0%, 0%);
+    position: relative;
+  }
+
+  footer {
+    position: relative;
+    bottom: 0;
+    margin: 20px auto;
+  }
+
+  .footer-container {
+    height: 50px;
+
+  }
+  .attribution {
+    padding: 10px;
+  }
+
+
+}
